@@ -75,12 +75,15 @@ namespace WpfApp1
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (textboxName.Text != "" && textboxSurName.Text != "" && textboxAge.Text != "" && textboxPhone.Text != "" && check_age() == true && check_number())
+            if (list.SelectedIndex != -1)
             {
-                group[list.SelectedIndex].Name = textboxName.Text;
-                group[list.SelectedIndex].SurName = textboxSurName.Text;
-                group[list.SelectedIndex].Age = int.Parse(textboxAge.Text);
-                group[list.SelectedIndex].Phon = textboxPhone.Text;
+                if (textboxName.Text != "" && textboxSurName.Text != "" && textboxAge.Text != "" && textboxPhone.Text != "" && check_age() == true && check_number())
+                {
+                    group[list.SelectedIndex].Name = textboxName.Text;
+                    group[list.SelectedIndex].SurName = textboxSurName.Text;
+                    group[list.SelectedIndex].Age = int.Parse(textboxAge.Text);
+                    group[list.SelectedIndex].Phon = textboxPhone.Text;
+                }
             }
         }
 
